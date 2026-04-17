@@ -7,89 +7,16 @@
 </head>
 <body>
 
-<!-- BLOQUEO: si no está logeado, redirige al login -->
-<script>
-    if (localStorage.getItem("logeado") !== "true") {
-        window.location.href = "login.html";
-    }
-</script>
+<div class="welcome-contenedor">
+    <h1 class="titulo-kawaii">📚✨ Bienvenido a KuroBooks ✨📚</h1>
+    <p class="subtitulo">Tu rincón mágico de historias, sueños y fantasía</p>
 
-<header>
-    <!-- LOGO KAWAII -->
-    <img src="logo-kurobooks.png" alt="Logo KuroBooks" style="width:280px; display:block; margin:auto; animation: brilloKawaii 3s ease-in-out infinite;">
-    <h1>💖 Bienvenido a KuroBooks 💖</h1>
-    <p>Tu biblioteca mágica pastel kawaii 🌙✨</p>
-
-    <button onclick="logout()" style="float:right; margin-top:-40px;">Cerrar sesión</button>
-</header>
-
-<section class="libros">
-    <article class="libro">
-        <h2>🌸 Mi Primer Libro 🌸</h2>
-        <p>Una historia encantada escrita con amor y magia pastel.</p>
-        <a href="libro1.html">Leer</a>
-    </article>
-    <article class="libro">
-    <h2>☁️ Sueños de Lavanda ☁️</h2>
-    <p>Relatos suaves y mágicos en tonos pastel.</p>
-    <a href="suenos-de-lavanda.html">Entrar</a>
-</article>
-<article class="libro">
-    <h2>✨ Corazones y Estrellas ✨</h2>
-    <p>Un viaje por mundos de fantasía y ternura infinita.</p>
-    <a href="corazones-y-estrellas.html">Entrar</a>
-</article>
-    <article class="libro">
-        <h2>☁️ Sueños de Lavanda ☁️</h2>
-        <p>Relatos suaves y dulces como las nubes del amanecer.</p>
-        <a href="libro2.html">Leer</a>
-    </article>
-    <article class="libro">
-    <h2>✨ Corazones y Estrellas ✨</h2>
-    <p>Un viaje por mundos de fantasía y ternura infinita.</p>
-    <a href="corazones-y-estrellas.html">Entrar</a>
-</article>
-
-<article class="libro">
-    <h2>🌈 Galería de Imágenes 🌈</h2>
-    <p>Un rincón lleno de magia pastel y arte kawaii.</p>
-    <a href="galeria.html">Ver galería</a>
-</article>
-
-    <article class="libro">
-        <h2>✨ Corazones y Estrellas ✨</h2>
-        <p>Un viaje por mundos de fantasía y ternura infinita.</p>
-        <a href="libro3.html">Leer</a>
-    </article>
-</section>
-
-<footer style="text-align:center; margin-top:40px;">
-    <p>🌈 Hecho con amor por Kuro 💖</p>
-</footer>
-
-<script>
-    function logout() {
-        localStorage.setItem("logeado", "false");
-        window.location.href = "login.html";
-    }
-</script>
-    <script>
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-}
-</script>
-
-
-</body>
-    <div class="barra-estado">
-    <span class="estado-texto">✨ Bienvenido, Kuro ✨</span>
-
-    <div class="estado-botones">
-        <button onclick="toggleDarkMode()">🌙 Modo oscuro</button>
-        <button onclick="logout()">🚪 Cerrar sesión</button>
+    <div class="botones-welcome">
+        <a href="login.html" class="btn">💖 Iniciar Sesión</a>
+        <a href="registro.html" class="btn btn-secundario">🌟 Crear Cuenta</a>
     </div>
 </div>
+
+</body>
 </html>
-<button onclick="toggleDarkMode()">🌙 Modo oscuro</button>
-<a href="index.html">Regístrate aquí 💖</a>
 
