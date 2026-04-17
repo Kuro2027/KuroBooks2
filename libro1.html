@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Libro 1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Título del Libro</h1>
+        <p>Descripción del libro</p>
+    </header>
+
+    <section class="capitulos">
+        <h2>Capítulos</h2>
+        <ul>
+            <li><a href="libro1-capitulo1.html">Capítulo 1</a></li>
+            <li><a href="libro1-capitulo2.html">Capítulo 2</a></li>
+        </ul>
+    </section>
+    <script>
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+
+    // Guardar estado
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("modoOscuro", "true");
+    } else {
+        localStorage.setItem("modoOscuro", "false");
+    }
+}
+
+// Activar automáticamente si estaba guardado
+window.onload = function() {
+    if (localStorage.getItem("modoOscuro") === "true") {
+        document.body.classList.add("dark-mode");
+    }
+};
+</script>
+
+</body>
+</html>
+<button onclick="toggleDarkMode()">🌙 Modo oscuro</button>

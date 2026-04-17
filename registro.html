@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro ✨</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="registro-contenedor">
+    <h1>💜 Crear Cuenta 💜</h1>
+    <p class="subtitulo">Únete a KuroBooks y entra en un mundo mágico</p>
+
+    <form onsubmit="return registrar()">
+        <label>Usuario</label>
+        <input type="text" id="usuario" required>
+
+        <label>Contraseña</label>
+        <input type="password" id="password" required>
+
+        <label>Confirmar contraseña</label>
+        <input type="password" id="password2" required>
+
+        <button type="submit">✨ Registrarse ✨</button>
+    </form>
+
+    <p class="login-link">
+        ¿Ya tienes cuenta?  
+        <a href="login.html">Inicia sesión aquí 💖</a>
+    </p>
+</div>
+
+<script>
+function registrar() {
+    const user = document.getElementById("usuario").value;
+    const pass = document
