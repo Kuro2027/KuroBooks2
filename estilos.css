@@ -1,406 +1,126 @@
-/* FUENTES KAWAII */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;600&display=swap');
+/* ---------------------------------------------------
+   🌸 KuroBooks — Estilo Pastel Kawaii
+   --------------------------------------------------- */
 
-/* FONDO ANIMADO PASTEL */
+/* Fuente kawaii */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap');
+
 body {
-    font-family: 'Fredoka', 'Quicksand', sans-serif;
-    background: linear-gradient(135deg, #ffe6f2, #e6f0ff, #e8ffe6, #fff5e6);
-    background-size: 600% 600%;
-    animation: pastelFlow 18s ease infinite;
     margin: 0;
-    padding: 20px;
-    color: #555;
-    position: relative;
-    overflow-x: hidden;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(135deg, #ffe6f7, #e8d9ff);
+    color: #5a4a66;
+    transition: 0.3s ease;
 }
 
-@keyframes pastelFlow {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 100%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 0%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* ESTRELLITAS ANIMADAS */
-body::before {
-    content: "✨ ✨ ✨ ✨ ✨";
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 40px;
-    width: 100%;
-    animation: estrellas 12s linear infinite;
-    opacity: 0.4;
-}
-
-@keyframes estrellas {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-200vh); }
-}
-
-/* HEADER KAWAII CON BANNER */
-header {
-    background: rgba(255, 255, 255, 0.7);
-    border: 3px solid #ffd6ea;
-    border-radius: 25px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
-    backdrop-filter: blur(6px);
-    margin-bottom: 30px;
-}
-
-header h1 {
-    font-size: 32px;
-    color: #ff7fcf;
-    text-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
-}
-
-header::before {
-    content: "🌸 ✨ 🌙 ✨ 🌸";
-    display: block;
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-/* TARJETAS DE LIBROS */
-.libros {
-    max-width: 750px;
-    margin: auto;
-}
-
-.libro {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 20px;
-    border: 3px solid #ffd6ea;
-    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
-    backdrop-filter: blur(6px);
-    transition: 0.3s;
-    position: relative;
-}
-
-.libro:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 25px rgba(255, 182, 193, 0.6);
-}
-
-.libro h2::before {
-    content: "💖 ";
-}
-
-/* BOTONES KAWAII CON CARITAS */
-button, a {
-    display: inline-block;
-    background: linear-gradient(135deg, #ffb3e6, #ff99cc);
-    color: white;
-    padding: 12px 18px;
-    border-radius: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 5px 10px rgba(255, 153, 204, 0.4);
-    font-size: 16px;
-}
-
-button:hover, a:hover {
-    background: linear-gradient(135deg, #ff99d6, #ff7fcf);
-    transform: scale(1.08);
-    box-shadow: 0 8px 15px rgba(255, 153, 204, 0.6);
-}
-
-button::before, a::before {
-    content: " (｡♥‿♥｡) ";
-}
-
-/* FORMULARIOS ADORABLES */
-form {
-    max-width: 350px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.65);
-    padding: 25px;
-    border-radius: 20px;
-    border: 3px solid #ffd6ea;
-    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
-    backdrop-filter: blur(8px);
-}
-
-input {
-    padding: 12px;
-    border: 2px solid #ffcce6;
-    border-radius: 12px;
-    font-size: 16px;
-    background: #fff;
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus {
-    border-color: #ff99cc;
-    box-shadow: 0 0 10px #ffb3d9;
-}
-
-/* CONTENIDO DEL LIBRO */
-.contenido {
+/* Contenedores generales */
+.contenedor, .login-contenedor, .registro-contenedor, .card {
     background: rgba(255, 255, 255, 0.75);
+    border-radius: 20px;
     padding: 25px;
-    border-radius: 20px;
-    border: 3px solid #ffd6ea;
-    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
-    max-width: 850px;
-    margin: auto;
-    backdrop-filter: blur(6px);
-}
-
-/* MODO OSCURO KAWAII */
-.dark-mode {
-    background: #2b244d !important;
-    color: #ffe6ff !important;
-}
-
-.dark-mode header {
-    background: rgba(60, 50, 100, 0.7);
-    border-color: #c7b7ff;
-}
-
-.dark-mode .libro,
-.dark-mode .contenido,
-.dark-mode form {
-    background: rgba(60, 50, 100, 0.6);
-    border-color: #c7b7ff;
-    color: #ffe6ff;
-}
-
-.dark-mode button,
-.dark-mode a {
-    background: #ff9ad6;
-}
-
-.dark-mode button:hover,
-.dark-mode a:hover {
-    background: #ff7fcf;
-}
-img {
-    animation: brilloKawaii 3s ease-in-out infinite;
-}
-
-@keyframes brilloKawaii {
-    0% { filter: drop-shadow(0 0 5px #ffb3d9); }
-    50% { filter: drop-shadow(0 0 15px #ff99cc); }
-    100% { filter: drop-shadow(0 0 5px #ffb3d9); }
-}
-
-/* BARRA DE ESTADO KAWAII */
-.barra-estado {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.75);
-    border-bottom: 3px solid #ffd6ea;
-    padding: 12px 20px;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
-    backdrop-filter: blur(6px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.estado-texto {
-    font-size: 18px;
-    color: #ff7fcf;
-    font-weight: bold;
-    text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
-}
-
-.estado-botones button {
-    margin-left: 10px;
-    font-size: 14px;
-    padding: 8px 12px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #ffb3e6, #ff99cc);
-    color: white;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(255, 153, 204, 0.4);
-    transition: 0.3s;
-}
-
-.estado-botones button:hover {
-    transform: scale(1.08);
-    background: linear-gradient(135deg, #ff99d6, #ff7fcf);
-}
-.dark-mode {
-    background: #2b244d !important;
-    color: #ffe6ff !important;
-}
-
-.dark-mode header {
-    background: rgba(60, 50, 100, 0.7);
-    border-color: #c7b7ff;
-}
-
-.dark-mode .libro,
-.dark-mode .contenido,
-.dark-mode form {
-    background: rgba(60, 50, 100, 0.6);
-    border-color: #c7b7ff;
-    color: #ffe6ff;
-}
-
-.dark-mode button,
-.dark-mode a {
-    background: #ff9ad6;
-}
-
-.dark-mode button:hover,
-.dark-mode a:hover {
-    background: #ff7fcf;
-}
-.subir-imagen {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.subir-imagen input {
-    margin-right: 10px;
-}
-
-.galeria img {
-    width: 250px;
-    border-radius: 20px;
-    border: 3px solid #ffd6ea;
-    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
-    transition: 0.3s;
-}
-
-.galeria img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 15px 25px rgba(255, 153, 204, 0.6);
-}
-.registro-contenedor {
-    max-width: 350px;
-    margin: 80px auto;
-    background: rgba(255, 240, 250, 0.85);
-    padding: 25px;
-    border-radius: 20px;
-    border: 3px solid #d8a7ff;
-    box-shadow: 0 10px 25px rgba(200, 150, 255, 0.4);
+    max-width: 400px;
+    margin: 40px auto;
+    border: 3px solid #ffb3e6;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
     text-align: center;
 }
 
-.registro-contenedor h1 {
+/* Títulos */
+h1, h2, h3 {
     color: #c77fd6;
-    text-shadow: 0 0 8px rgba(200, 150, 255, 0.5);
+    text-shadow: 0 0 8px rgba(200, 150, 255, 0.4);
 }
 
-.subtitulo {
-    color: #a86bd6;
-    margin-bottom: 20px;
-}
-
-.registro-contenedor input {
+/* Inputs */
+input, textarea, select {
     width: 90%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     border-radius: 12px;
     border: 2px solid #d8a7ff;
+    background: #fff;
+    font-size: 15px;
 }
 
-.registro-contenedor button {
+/* Botones */
+button, .btn {
     width: 100%;
-    padding: 10px;
-    background: linear-gradient(135deg, #d8a7ff, #c77fd6);
-    border: none;
-    border-radius: 12px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(200, 150, 255, 0.4);
-    transition: 0.3s;
-}
-
-.registro-contenedor button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #c77fd6, #b46cff);
-}
-
-.login-link a {
-    color: #b46cff;
-    font-weight: bold;
-}
-.login-contenedor {
-    max-width: 350px;
-    margin: 80px auto;
-    background: rgba(255, 240, 250, 0.8);
-    padding: 25px;
-    border-radius: 20px;
-    border: 3px solid #ffb3e6;
-    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
-    text-align: center;
-}
-
-.login-contenedor h1 {
-    color: #ff7fcf;
-    text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
-}
-
-.subtitulo {
-    color: #c77fd6;
-    margin-bottom: 20px;
-}
-
-.login-contenedor input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 12px;
-    border: 2px solid #ffb3e6;
-}
-
-.login-contenedor button {
-    width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: linear-gradient(135deg, #ffb3e6, #ff99cc);
     border: none;
     border-radius: 12px;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(255, 153, 204, 0.4);
     transition: 0.3s;
 }
 
-.login-contenedor button:hover {
+button:hover, .btn:hover {
     transform: scale(1.05);
     background: linear-gradient(135deg, #ff99d6, #ff7fcf);
 }
 
-.registro-link a {
-    color: #ff7fcf;
-    font-weight: bold;
-}
-.registro-link {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.registro-link a {
+/* Enlaces */
+a {
     color: #ff7fcf;
     font-weight: bold;
     text-decoration: none;
 }
 
-.registro-link a:hover {
+a:hover {
     text-shadow: 0 0 6px #ffb3e6;
 }
 
----
----
+/* Tarjetas de libros */
+.card {
+    max-width: 500px;
+}
 
-@import "{{ site.theme }}";
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* Barra superior kawaii */
+.topbar {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 200, 240, 0.7);
+    border-bottom: 3px solid #ffb3e6;
+    text-align: center;
+    font-size: 18px;
+    backdrop-filter: blur(6px);
+}
+
+/* Modo oscuro */
+.dark-mode {
+    background: linear-gradient(135deg, #2a2233, #1a1620);
+    color: #f0d9ff;
+}
+
+.dark-mode .contenedor,
+.dark-mode .login-contenedor,
+.dark-mode .registro-contenedor,
+.dark-mode .card {
+    background: rgba(40, 30, 55, 0.7);
+    border-color: #a86bd6;
+    box-shadow: 0 10px 25px rgba(80, 50, 120, 0.5);
+}
+
+.dark-mode input {
+    background: #3a2a4d;
+    color: #f0d9ff;
+    border-color: #b46cff;
+}
+
+.dark-mode button {
+    background: linear-gradient(135deg, #b46cff, #8f4fd6);
+}
+
+.dark-mode a {
+    color: #d8a7ff;
+}
+
